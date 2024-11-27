@@ -1,5 +1,15 @@
 import { tweetsData } from './data.js'
 import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
+/* === Imports === */
+import { initializeApp } from "firebase/app"
+import { getAuth,
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    signOut,
+    onAuthStateChanged,
+    GoogleAuthProvider,
+    signInWithPopup } from "firebase/auth"
+
 
 const tweetInput = document.getElementById('tweet-input')
 
